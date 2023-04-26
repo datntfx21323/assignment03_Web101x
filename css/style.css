@@ -1,0 +1,544 @@
+* {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+
+#banner {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 1799px;
+  margin: 0 auto;
+}
+
+#banner img {
+  /* width: 1170px; */
+  width: 1799px;
+  height: 400px;
+}
+
+#banner h1,
+#banner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+#banner span {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav-bar {
+  text-align: center;
+  width: 1799px;
+  margin: 0 auto;
+}
+
+#nav-bar .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr repeat(2, 1fr);
+  /* grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr); */
+  justify-content: center;
+  align-content: center;
+  padding: 0 50px;
+  position: relative;
+}
+
+#nav-bar .container a {
+  text-decoration: none;
+  border: 1px solid rgb(214, 214, 214);
+  border-left: 0;
+  padding: 10px 0;
+}
+
+#nav-bar .container a:hover {
+  background-color: lemonchiffon;
+  color: red;
+}
+
+/*thiết lập position cho image avatar */
+#nav-bar .container a img {
+  width: 120px;
+  position: absolute;
+  height: 130px;
+  /* left: 45%;
+  bottom: -145%; */
+  left: 45%;
+  /* bottom: -150%; */
+  top: -125%;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#about {
+  /* background: linear-gradient(
+    90deg,
+    rgba(244, 233, 255, 2) 0%,
+    rgba(252, 167, 213, 1) 35%,
+    rgba(194, 245, 255, 1) 100%
+  ); */
+  width: 1799px;
+  /* width: 100%; */
+  /* margin: 0 50px; */
+  margin: 0 auto;
+  background: linear-gradient(90deg, #f7f7f7 50%, #e9e9e9 50%);
+}
+
+#about .container {
+  /* width: 1799px; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 50px;
+  /*chia đôi màu nền container với thuộc tính linear-gradient*/
+  /* background: linear-gradient(90deg, #f7f7f7 50%, #e9e9e9 50%); */
+  padding: 0;
+  font-size: 18px;
+}
+
+#about h1 {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+/* căn chỉnh vị trí và động rộng dòng của text*/
+#about #target p,
+#about #personal-info ul {
+  padding: 50px;
+  line-height: 2;
+}
+
+#personal-info ul {
+  padding-left: 1em;
+}
+#personal-info ul li {
+  list-style: none;
+}
+
+#job-info {
+  width: 1799px;
+  margin: 0 auto;
+}
+
+/*chia layout cho phần thông tin nghề nghiệp theo 3 cột và 2 hàng*/
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  width: 80%;
+}
+
+/*chia bố cục của từng items của phần thông tin nghề nghiệp*/
+#job-info .container-content {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 80px 1fr;
+  padding-top: 50px;
+  border: 1px solid #8f8f8f;
+}
+
+#job-info .left-header {
+  justify-self: start;
+  padding-left: 30px;
+}
+
+#job-info .content {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  line-height: 2;
+  padding: 0 10px 20px 10px;
+  align-self: flex-start;
+}
+
+#job-info .content span {
+  display: block;
+}
+
+#job-info .content h3 {
+  padding-top: 20px;
+}
+
+/*thiết lập possition cho chấm tròn ở các đầu mục*/
+.content ul li {
+  list-style: none;
+  position: relative;
+}
+
+/*khởi tạo chấm tròn và set vị trí, màu sắc */
+.content li::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: -2em;
+  background-color: rgb(49, 255, 245);
+  border: 1.5px solid red;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/*chia bố cục cho các items trong mục sở thích */
+.content-hobby {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3fr 1fr;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  padding-top: 50px;
+}
+
+.content-hobby div {
+  display: inline-block;
+}
+
+.hobby-details {
+  align-self: flex-start;
+}
+
+#language .content span {
+  display: inline-block;
+  background: #199cdb;
+  height: 5px;
+}
+
+/*chia bố cục các items trong trường ngôn ngữ*/
+#language .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/*thiết lập vị trí cho items tiêu đề Tiếng Anh */
+#language .content span:first-child {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background: none;
+}
+
+/*thiết lập vị trí cho items tiêu đề Tiếng Nhật */
+#language .content span:nth-child(5) {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  background: none;
+}
+
+/*thiết lập màu nền cho những items chưa được chon*/
+#language .content span:nth-child(4),
+#language .content span:nth-child(7),
+#language .content span:last-child {
+  background: lightgrey;
+}
+
+#skill .content span {
+  display: inline-block;
+  background: #199cdb;
+  height: 5px;
+}
+
+/*chia bố cục các items trong trường kix năng */
+#skill .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 10px;
+}
+
+/*thiết lập vị trí cho items tiêu đề HTML/CSS */
+#skill .content span:first-child {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background: none;
+}
+
+/*thiết lập vị trí cho items tiêu đề Javascripts */
+#skill .content span:nth-child(5) {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  background: none;
+}
+
+/*thiết lập vị trí cho items tiêu đề nodejs */
+#skill .content span:nth-child(9) {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  background: none;
+}
+
+/*thiết lập vị trí cho items tiêu đề Bootstraps5 */
+#skill .content span:nth-child(13) {
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 7 / 8;
+  background: none;
+}
+
+/*thiết lập màu nền cho những items chưa được chon*/
+#skill .content span:nth-child(3),
+#skill .content span:nth-child(4),
+#skill .content span:nth-child(8),
+#skill .content span:nth-child(12),
+#skill .content span:nth-child(15),
+#skill .content span:nth-child(16) {
+  background: lightgrey;
+}
+
+/* job-info view more */
+
+#job-info .item-content {
+  border: 1px solid #8f8f8f;
+  position: relative;
+}
+
+#job-info .item-content p {
+  padding: 20px 0 0 20px;
+  font-size: 28px;
+}
+
+#job-info .item-content .content p {
+  font-size: 16px;
+}
+#job-info .item-content .ic-job {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.view {
+  height: 80px;
+}
+
+.view-more,
+.view-less {
+  display: inline-block;
+  margin: 30px 0 10px 20px;
+  border: 1px solid rgb(254, 255, 169);
+  padding: 5px 10px;
+  background-color: rgb(254, 255, 169);
+  border-radius: 30px;
+}
+
+.view-more i,
+.view-less i {
+  padding-right: 10px;
+}
+
+/* tạo reponsive cho phần chứng chỉ */
+#certificate {
+  width: 1799px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/*chuyển các khối div từ dạng block sang inline-block*/
+#certificate .container div {
+  display: inline-block;
+  padding-top: 30px;
+}
+
+/*chia bố cục cho mục chứng chỉ */
+#certificate .container {
+  display: grid;
+  width: 93%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  padding: 30px 0;
+}
+
+/*thiết lập vị trí cố định cho thẻ h1*/
+#certificate .container h1 {
+  grid-column: 1 /-1;
+  grid-row: 1 / 2;
+}
+
+/* thiết lập thuộc tính css cho thẻ img trong phần chứng chỉ */
+#certificate .container img {
+  width: 270px;
+  padding: 30px 30px 30px 20px;
+  display: inline-block;
+}
+
+#certificate span {
+  display: block;
+}
+
+#certificate .cert-content {
+  border-bottom: 1px solid rgb(200, 170, 126);
+  padding-bottom: 20px;
+}
+#certificate .cert-content #border-left {
+  border-left: 1px solid rgb(200, 170, 126);
+}
+#certificate .details {
+  vertical-align: top;
+}
+
+/* tạo reponsive cho mục dự án*/
+#project {
+  width: 1799px;
+  margin: 0 auto;
+}
+
+/*chia bố cục các items trong mục dự án */
+#project .container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+/*thiết lập vị trí cho thẻ h1*/
+#project .container h1 {
+  grid-column: 1 /-1;
+  grid-row: 1 / 2;
+  padding-bottom: 20px;
+}
+
+#project .container div {
+  width: 550px;
+  border: 1px solid grey;
+}
+
+#project .container img {
+  width: 100%;
+  display: block;
+}
+
+/* thiết lập thuộc tính css cho mục tiêu đề trong phần dự án */
+.project-title {
+  font-weight: bold;
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 30px;
+  border-top: 1px solid grey;
+}
+
+/*thiết lập thuộc tính css cho vùng thông tin cá nhân của dự án*/
+.project-time {
+  border-top: 1px solid grey;
+}
+
+.project-time span {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+.project-time span:first-child {
+  background: #199cdb;
+  border-radius: 30px;
+}
+
+/* thiết lập thuộc tính css cho table */
+#project table tr td {
+  border-top: 1px solid grey;
+  height: 40px;
+  padding: 10px;
+}
+
+/*thiết lập reponsive cho vùng footer*/
+#footer {
+  width: 1799px;
+  margin: 0 auto;
+}
+
+#footer .container ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0 30px;
+}
+
+#footer .container {
+  display: flex;
+  justify-content: center;
+}
+
+#footer .container i {
+  margin-right: 15px;
+  font-size: 30px;
+}
+
+#footer .container a {
+  text-decoration: none;
+}
+
+#footer .container a:hover {
+  color: seagreen;
+}
+
+.hidden {
+  display: none;
+}
+
+.check-email > section {
+  padding-top: 50px;
+}
+
+.validate-email {
+  margin-left: 30px;
+}
+
+.validate-email #email {
+  width: 240px;
+}
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
+.container-fluid section {
+  background-color: #f4fffb;
+}
+.container-fluid section li {
+  background-color: #f4fffb;
+}
+
+.container-fluid #timeline {
+  grid-column: 3/4;
+  grid-row: 1 / -1;
+}
+
+#timeline li div:last-child {
+  border-bottom: 1px dashed #0a58ca;
+}
+
+.container-fluid #timeline ul li div:first-child span {
+  background-color: rgb(192, 146, 244);
+  border: 1px solid black;
+}

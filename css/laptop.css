@@ -1,0 +1,757 @@
+@media (min-width: 993px) {
+  * {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bg-grey {
+    background: #f7f7f7;
+  }
+
+  section > .container {
+    /* width: 1170px; */
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+  }
+
+  #banner {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #banner img {
+    width: 100%;
+    height: 400px;
+  }
+
+  #banner h1,
+  #banner span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+
+  #banner span {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #nav-bar {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #nav-bar .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 200px repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+    padding: 0 50px;
+  }
+
+  #nav-bar .container a {
+    text-decoration: none;
+    border: 1px solid rgb(214, 214, 214);
+    border-left: 0;
+    padding: 10px 0;
+  }
+
+  #nav-bar .container a:hover {
+    background-color: lemonchiffon;
+    color: red;
+  }
+
+  #nav-bar .container a:nth-child(3) {
+    position: relative;
+  }
+
+  /*thiết lập position cho image avatar */
+  #nav-bar .container a img {
+    width: 130px;
+    position: absolute;
+    height: 130px;
+    left: 19%;
+    top: -110%;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  #about {
+    width: 100%;
+    margin: 0 auto;
+    /*chia đôi màu nền container với thuộc tính linear-gradient*/
+    background: linear-gradient(90deg, #f7f7f7 50%, #e9e9e9 50%);
+  }
+
+  #about .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 50px;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  #about h1 {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+
+  /* căn chỉnh vị trí và động rộng dòng của text*/
+  #about #target p,
+  #about #personal-info ul {
+    padding: 50px;
+    line-height: 2;
+  }
+
+  #personal-info ul {
+    padding-left: 1em;
+  }
+  #personal-info ul li {
+    list-style: none;
+  }
+
+  #about .check-email h1 {
+    padding-left: 30px;
+  }
+
+  /* Job-info */
+  #job-info {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*chia layout cho phần thông tin nghề nghiệp theo 3 cột và 2 hàng*/
+  #job-info .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1.5fr 1fr; */
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  /*chia bố cục của từng items của phần thông tin nghề nghiệp*/
+  #job-info .container-content {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 80px 1fr;
+    padding-top: 50px;
+    border: 1px solid #8f8f8f;
+  }
+
+  #job-info .left-header {
+    justify-self: start;
+    padding-left: 30px;
+  }
+
+  #job-info .content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    line-height: 2;
+    /* padding: 0 10px 20px 10px; */
+    align-self: flex-start;
+  }
+
+  #job-info .content span {
+    display: block;
+  }
+
+  #job-info .content h3 {
+    padding-top: 20px;
+  }
+
+  /*thiết lập possition cho chấm tròn ở các đầu mục*/
+  .content ul li {
+    list-style: none;
+    position: relative;
+  }
+
+  /*khởi tạo chấm tròn và set vị trí, màu sắc */
+  .content li::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: -2em;
+    background-color: rgb(49, 255, 245);
+    border: 1.5px solid red;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .content-hobby div {
+    font-size: 15px;
+  }
+
+  /*turn on Certificate with screen large 1000px */
+  #certificate-lagre {
+    display: block;
+  }
+
+  #certificate-lagre .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 30% 20% 30%;
+    grid-template-rows: auto repeat(2, 1fr);
+    padding: 30px 0;
+  }
+
+  #certificate-lagre .container div {
+    padding-top: 30px;
+  }
+
+  /*thiết lập vị trí cố định cho thẻ h1*/
+  #certificate-lagre .container h1 {
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+  }
+
+  /* thiết lập thuộc tính css cho thẻ img trong phần chứng chỉ */
+  #certificate-lagre .container img {
+    width: 100%;
+  }
+
+  #certificate-lagre .cert-img #border-left {
+    border-left: 1px solid rgb(200, 170, 126);
+    padding-bottom: 45px;
+  }
+
+  #certificate-lagre .border-cert {
+    border-bottom: 1px solid rgb(200, 170, 126);
+  }
+
+  #certificate-lagre span {
+    display: block;
+  }
+
+  #certificate-lagre .details {
+    padding-left: 20px;
+  }
+
+  /* hidden certificate sreen small */
+  /* tạo reponsive cho phần chứng chỉ */
+  #certificate {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 2;
+  }
+
+  /*chuyển các khối div từ dạng block sang inline-block*/
+  #certificate .container div {
+    display: inline-block;
+    padding-top: 30px;
+  }
+
+  /*chia bố cục cho mục chứng chỉ */
+  #certificate .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    padding: 30px 0;
+  }
+
+  /*thiết lập vị trí cố định cho thẻ h1*/
+  #certificate .container h1 {
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+  }
+
+  #certificate .container h3,
+  #certificate .container span {
+    padding-left: 15px;
+  }
+
+  #certificate .cert-content {
+    border-bottom: 1px solid rgb(200, 170, 126);
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  /* thiết lập thuộc tính css cho thẻ img trong phần chứng chỉ */
+  #certificate .container img {
+    width: 270px;
+    /* padding: 30px 30px 30px 20px; */
+    display: inline-block;
+  }
+
+  #certificate span {
+    display: block;
+  }
+
+  #certificate .cert-content #border-left {
+    border-left: 1px solid rgb(200, 170, 126);
+  }
+  #certificate .details {
+    vertical-align: top;
+  }
+
+  /* tạo reponsive cho mục dự án*/
+  #project {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*chia bố cục các items trong mục dự án */
+  #project .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    padding: 0;
+  }
+
+  /*thiết lập vị trí cho thẻ h1*/
+  #project .container h1 {
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+    padding-bottom: 20px;
+  }
+
+  #project .container div {
+    width: 100%;
+    border: 1px solid grey;
+  }
+
+  #project .container img {
+    width: 100%;
+    display: block;
+  }
+
+  /* thiết lập thuộc tính css cho mục tiêu đề trong phần dự án */
+  .project-title {
+    font-weight: bold;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-top: 1px solid grey;
+  }
+
+  /*thiết lập thuộc tính css cho vùng thông tin cá nhân của dự án*/
+  .project-time {
+    border-top: 1px solid grey;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .project-time span {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+  }
+
+  .project-time span:first-child {
+    background: #199cdb;
+    border-radius: 30px;
+    margin: 10px 20px 0 20px;
+    padding-left: 26px;
+  }
+  #project .project-time span:last-child {
+    grid-column: 2/3;
+    /* font-size: 16px; */
+  }
+
+  /* thiết lập thuộc tính css cho table */
+  #project table tr td {
+    border-top: 1px solid grey;
+    height: 40px;
+    padding: 10px;
+  }
+
+  /*thiết lập reponsive cho vùng footer*/
+  #footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #footer .container ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 30px;
+  }
+
+  #footer .container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  #footer .container i {
+    margin-right: 15px;
+    font-size: 30px;
+  }
+
+  #footer .container a {
+    text-decoration: none;
+  }
+
+  #footer .container a:hover {
+    color: seagreen;
+  }
+}
+
+@media (max-width: 992px) {
+  * {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    font-size: 14px;
+  }
+  .bg-grey {
+    background: #f7f7f7;
+  }
+
+  section > .container {
+    width: 100%;
+    margin: auto;
+    display: block;
+
+    padding: 30px 50px;
+  }
+
+  #banner {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #banner img {
+    width: 100%;
+  }
+
+  #banner h1,
+  #banner span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+
+  #banner span {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #nav-bar {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #nav-bar .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 200px repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+    padding: 0 50px;
+  }
+
+  #nav-bar .container a {
+    text-decoration: none;
+    border: 1px solid rgb(214, 214, 214);
+    border-left: 0;
+    padding: 10px 0;
+  }
+
+  #nav-bar .container a:hover {
+    background-color: lemonchiffon;
+    color: red;
+  }
+
+  #nav-bar .container a:nth-child(3) {
+    position: relative;
+  }
+
+  /*thiết lập position cho image avatar */
+  #nav-bar .container a img {
+    width: 130px;
+    position: absolute;
+    height: 130px;
+    left: 19%;
+    top: -110%;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  #about {
+    width: 100%;
+    margin: 0 auto;
+    /*chia đôi màu nền container với thuộc tính linear-gradient*/
+    background: linear-gradient(90deg, #f7f7f7 50%, #e9e9e9 50%);
+  }
+
+  #about .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  #about h1 {
+    padding-top: 50px;
+    padding-left: 0;
+  }
+
+  #about #personal-info h1 {
+    padding-left: 50px;
+  }
+
+  /* căn chỉnh vị trí và động rộng dòng của text*/
+  #about #target p,
+  #about #personal-info ul {
+    padding-top: 30px;
+    padding-left: 0;
+    line-height: 2;
+  }
+  #about #personal-info ul {
+    padding-left: 50px;
+  }
+
+  #personal-info ul {
+    padding-left: 1em;
+  }
+  #personal-info ul li {
+    list-style: none;
+  }
+
+  #about .check-email h1 {
+    padding-left: 30px;
+  }
+
+  #job-info {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*chia layout cho phần thông tin nghề nghiệp theo 3 cột và 2 hàng*/
+  #job-info .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1.5fr 1fr; */
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  /*chia bố cục của từng items của phần thông tin nghề nghiệp*/
+  #job-info .container-content {
+    width: 240px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50px 1fr;
+    padding-top: 30px;
+    border: 1px solid #8f8f8f;
+  }
+
+  #job-info .left-header {
+    justify-self: start;
+    padding-left: 30px;
+  }
+
+  #job-info .container-content h1,
+  #job-info .container-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .ic-toolbox:before,
+  .ic-pencil:before,
+  .ic-telescope:before,
+  .ic-mic:before,
+  .ic-tools-2:before {
+    font-size: 40px;
+  }
+
+  .ic-megaphone:before {
+    font-size: 20px;
+    padding: 15px;
+    border: 2px solid lime;
+  }
+
+  .ic-strategy:before,
+  .ic-hotairballoon:before {
+    font-size: 20px;
+    padding: 15px 19px;
+    border: 2px solid lime;
+  }
+
+  .ic-basket:before {
+    font-size: 19px;
+    padding: 15px;
+    border: 2px solid lime;
+  }
+  #job-info .content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    line-height: 2;
+    padding: 0 30px 30px 30px;
+    align-self: flex-start;
+  }
+
+  #job-info .content span {
+    display: block;
+  }
+
+  .content-hobby div {
+    font-size: 11px;
+  }
+
+  #job-info .content {
+    padding: 0 10px 5px 5px;
+  }
+
+  #job-info .item-content p,
+  #job-info .item-content .content h3 {
+    font-size: 20px;
+  }
+
+  #certificate-lagre {
+    display: none;
+  }
+
+  /* tạo reponsive cho phần chứng chỉ */
+  #certificate {
+    display: block;
+    width: 100%;
+  }
+
+  #certificate .container {
+    width: 100%;
+  }
+
+  #certificate .container h1 {
+    font-size: 26px;
+  }
+
+  #certificate .container h3 {
+    font-size: 20px;
+  }
+
+  #certificate .container div {
+    padding-top: 15px;
+  }
+  #certificate .container h3,
+  #certificate .container span {
+    padding-left: 15px;
+  }
+
+  #certificate .container .borderbot-mobile {
+    margin-left: 20px;
+  }
+
+  #certificate .container img {
+    width: 100%;
+    display: block;
+  }
+
+  #certificate .left-borderbot {
+    margin-left: 20px;
+  }
+
+  #certificate .right-borderbot {
+    margin-right: 20px;
+  }
+
+  #certificate .cert-content #border-left {
+    padding-left: 20px;
+  }
+
+  /* Project */
+  #project {
+    width: 100%;
+  }
+
+  #project .container {
+    padding: 10px 0;
+    gap: 5px;
+    margin: 0 auto;
+  }
+
+  #project .container h1 {
+    padding-bottom: 0;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  #project .container .details {
+    width: auto;
+  }
+  #project .project-title {
+    padding-left: 10px;
+    padding-top: 0;
+  }
+
+  #project .project-time {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  #project .project-time span {
+    padding: 0;
+    margin: 0;
+  }
+
+  #project .project-time span:first-child {
+    margin: 5px;
+    padding: 5px 0px;
+    padding-left: 15px;
+    width: 60px;
+    height: 30px;
+  }
+
+  #project .project-time span:last-child {
+    grid-column: 2/3;
+  }
+
+  #project .details td {
+    vertical-align: text-top;
+  }
+
+  /* footer */
+  #footer {
+    width: 100%;
+  }
+
+  #footer .container {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  #footer .container ul li {
+    font-size: 15px;
+    margin: 0 10px;
+  }
+}
